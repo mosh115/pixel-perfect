@@ -1,0 +1,137 @@
+.app-footer {
+    background-color: $clr_dark_footer;
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        flex-direction: column;
+        align-items: center;
+        .brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .logo {
+                width: 100px;
+                padding-bottom: 20px;
+            }
+            nav {
+                gap: 20px;
+                padding-bottom: rem(25px);
+                font-size: rem(18px);
+                line-height: em(28, 18);
+                a {
+                    &:hover {
+                        color: $clr_pink;
+                    }
+                }
+            }
+        }
+
+        small {
+            font-size: rem(15px);
+            line-height: em(25, 15);
+            opacity: 0.6;
+        }
+
+        .address {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .social {
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 15px;
+            svg path {
+                width: 25px;
+                &:hover {
+                    fill: $clr_pink;
+                }
+            }
+        }
+    }
+
+    @include for-narrow-layout {
+        .footer {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            & > *:not(:last-child) {
+                flex-basis: 50%;
+            }
+            .brand {
+                align-items: flex-start;
+                padding-bottom: 10px;
+                .logo {
+                    padding-bottom: 50px;
+                }
+            }
+            .address {
+                text-align: right;
+                padding-bottom: 0;
+                align-self: flex-start;
+            }
+
+            section:last-child {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: right;
+                & > * {
+                    flex-basis: 50%;
+                }
+                .social {
+                    justify-content: flex-start;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @include for-normal-layout {
+        .footer {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+            & > *:not(:last-child) {
+                flex: 1;
+            }
+            .brand {
+                align-items: flex-start;
+                padding-bottom: 0;
+                .logo {
+                    padding-bottom: 20px;
+                    width: 160px;
+                }
+
+                nav {
+                    padding-bottom: 0;
+                    gap: 30px;
+                }
+            }
+            .address {
+                text-align: left;
+            }
+
+            section:last-child {
+                height: 100%;
+                flex-direction: column;
+                align-items: flex-end;
+
+                .social {
+                    flex: 2;
+                    padding-bottom: 0;
+                    align-items: flex-start;
+                }
+                small {
+                    align-self: flex-end;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}

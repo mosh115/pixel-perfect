@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $clr_white;
+    color: $clr_pink;
+}
+
+html {
+    font-family: livvic-semi-bold;
+    color: $clr_white;
+    background-color: $clr_blue;
+    margin: 0 auto;
+}
+
+body {
+    font-size: rem(18px);
+    margin: 0;
+    // max-width: 1440px;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Livvic-bold;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+section,
+main,
+footer {
+    padding: 0px;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    max-width: 60ch;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}

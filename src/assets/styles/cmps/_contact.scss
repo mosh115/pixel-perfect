@@ -1,0 +1,58 @@
+.contact {
+    height: 300px;
+    background-color: $clr_pink;
+    position: relative;
+    overflow: hidden;
+    .action {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        gap: 20px;
+        h1 {
+            font-size: rem(32px);
+            text-align: center;
+            color: $clr_dark_blue;
+        }
+        button {
+            color: $clr_dark_blue;
+            border-color: $clr_dark_blue;
+            cursor: pointer;
+            &:hover {
+                background-color: $clr_dark_blue;
+                color: $clr_white;
+            }
+        }
+    }
+
+    &::before {
+        content: url(../../images/bg-pattern-home-6-about-5.svg);
+        position: absolute;
+        bottom: -30px;
+    }
+
+    @include for-narrow-layout {
+        height: 200px;
+        .action {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+    }
+    @include for-normal-layout {
+        .action {
+            padding: 0;
+            h1 {
+                font-size: rem(48px);
+            }
+        }
+    }
+    @include for-wide-layout {
+        .action {
+            padding: 0 50px;
+        }
+        &::before {
+            bottom: -5px;
+        }
+    }
+}

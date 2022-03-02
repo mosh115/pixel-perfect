@@ -1,0 +1,125 @@
+.app-header {
+    // padding-top: 70px;
+    position: relative;
+    align-items: center;
+
+    .logo {
+        width: 160px;
+        height: 40px;
+        margin-inline-end: 80px;
+    }
+    .nav {
+        a:not(:last-child) {
+            font-weight: 600;
+            line-height: 28px;
+            padding-inline-end: 40px;
+            &:hover,
+            &.active {
+                color: $clr_pink;
+            }
+        }
+
+        .btn-contact {
+            // justify-content: end;
+            margin-left: auto;
+            button {
+                &:hover {
+                    color: $clr_blue;
+                    background-color: $clr_white;
+                }
+            }
+        }
+    }
+    .btn-nav {
+        display: none;
+    }
+
+    @media (max-width: 720px) {
+        justify-content: space-between;
+        padding-top: 40px;
+        .black-screen {
+            position: fixed;
+            z-index: 50;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.623);
+            pointer-events: none;
+            opacity: 0;
+
+            transition: opacity 0.7s;
+            &.open {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+
+        .nav {
+            background-color: $clr_menu;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 60vw;
+            height: 100vh;
+            padding-top: 120px;
+            padding-inline-start: 40px;
+            z-index: 100;
+            transform: translateX(100%);
+
+            transition: transform 0.7s;
+
+            &.menu-open {
+                transform: translateX(0);
+
+                // .black-screen {
+                //     opacity: 1;
+                //     pointer-events: all;
+                // }
+            }
+
+            a {
+                display: block;
+                padding-bottom: 40px;
+            }
+
+            .close-menu {
+                position: fixed;
+                border: none;
+                transform: rotate(45deg);
+                font-size: 40px;
+                top: 50px;
+                right: 30px;
+            }
+
+            &::before {
+                content: url(../../images/bg-pattern-about-1-mobile-nav-1.svg);
+                position: absolute;
+                right: -100px;
+                bottom: -5px;
+            }
+        }
+        .btn-nav {
+            display: block;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+    }
+
+    @include for-narrow-layout {
+        padding-top: 60px;
+        .nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+        .close-menu {
+            display: none;
+        }
+    }
+    @include for-normal-layout {
+        padding-top: 70px;
+    }
+}

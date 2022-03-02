@@ -1,0 +1,44 @@
+.team-item {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    p {
+        font-size: rem(15px);
+        line-height: em(25, 15);
+        padding-bottom: em(25, 15);
+    }
+    h3 {
+        color: $clr_light_blue;
+        line-height: em(28, 18);
+        padding-bottom: em(3, 18);
+        font-size: rem(18px);
+    }
+    h4 {
+        font-size: rem(13px);
+        font-weight: 500;
+        line-height: em(18, 13);
+        padding-bottom: em(10, 13);
+    }
+    img {
+        width: 62px;
+        height: 62px;
+        border: 2px solid #c4fffe;
+        border-radius: 50%;
+        align-self: center;
+    }
+    &::before {
+        content: url(../../images/icon-quotes.svg);
+        position: absolute;
+        z-index: -1;
+        top: -30px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    @include for-normal-layout {
+        h4 {
+            padding-bottom: em(25, 13);
+        }
+    }
+}

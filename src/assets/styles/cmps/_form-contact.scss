@@ -1,0 +1,38 @@
+.form-contact {
+    flex-basis: 50%;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+
+        input,
+        textarea {
+            width: auto;
+            all: unset;
+            background-color: inherit;
+            color: $clr_white;
+            padding: 15px 0;
+            font-weight: 600;
+            font-size: rem(15px);
+            line-height: 25px;
+            letter-spacing: -0.115385px;
+            box-shadow: 0 0.5px 0;
+            padding-inline-start: 10px;
+            &:hover {
+                color: $clr_pink;
+            }
+            &::placeholder {
+                color: $clr_white;
+                mix-blend-mode: normal;
+                opacity: 0.6;
+            }
+        }
+        button {
+            background-color: $clr_white;
+            color: $clr_blue;
+            margin-top: 20px;
+            align-self: flex-start;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
+
+// Basics
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/links";
+@import "basics/button";
+@import "basics/base";
+
+// Views
+
+@import "views/home-page";
+@import "views/about-page";
+@import "views/contact-page";
+
+// Components
+@import "cmps/app-header";
+@import "cmps/hero";
+@import "cmps/app-footer";
+@import "cmps/about";
+@import "cmps/about-us";
+@import "cmps/team";
+@import "cmps/about-item";
+@import "cmps/team-item";
+@import "cmps/contact";
+@import "cmps/clients";
+@import "cmps/director-item";
+@import "cmps/directors";
+@import "cmps/form-contact";
